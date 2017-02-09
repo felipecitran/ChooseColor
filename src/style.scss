@@ -1,0 +1,364 @@
+@import 'variables';
+@import 'mixins';
+ 
+body {
+    background-color: $white; 
+    height: 100% !important;
+    margin:$zero;
+	padding:$zero;
+}
+html {
+	margin:$zero;
+	padding:$zero;
+      height: 100% !important;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+a ,
+a:hover ,
+a:focus ,{
+
+    text-decoration:none;
+}
+.clearfix {
+    clear: both;
+}
+
+figure {
+    margin:$zero !important;
+}
+/*Modicando scroll no Chrome*/
+
+/*scrool*/
+/* Largura da barra de rolagem */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Fundo da barra de rolagem */
+::-webkit-scrollbar-track-piece {
+    background-color: #f0f0f0;
+    border-left: 1px solid #f0f0f0;
+}
+
+/* Cor do indicador de rolagem */
+::-webkit-scrollbar-thumb:vertical,
+::-webkit-scrollbar-thumb:horizontal {
+    background-color: #a6a6a6;
+}
+
+    /* Cor do indicador de rolagem - ao passar o mouse */
+    ::-webkit-scrollbar-thumb:vertical:hover,
+    ::-webkit-scrollbar-thumb:horizontal:hover {
+        background-color: #717171;
+    }
+
+/*bootstrap*/
+
+.jumbotron {
+    padding-top: $twenty + 58;
+    padding-bottom: $twenty * 2;
+    
+
+}
+/*Carrousel*/
+.carousel-control.right,.carousel-control.left {
+    border:$zero;
+}
+
+/*Colors Fonts*/
+.font-blue{ 
+    color:$blue-solid;
+}
+.font-green{
+    color:$green-solid;
+}
+.font-red{
+    color:$red-solid;
+}
+.font-yellow{
+    color:$yellow-solid;
+}
+/*Loader*/
+#loader {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(255,255,255,0.9);
+    z-index: 999999999;
+    padding: 50% 10px 0 10px;
+}
+
+.progress {
+    position: fixed;
+    border: 16px solid $gray-dark;
+    border-top: 16px solid $gray-light;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    top: 15%;
+    left: 47%;
+    background-color: transparent;
+    animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/*Header*/
+
+.navbar-brand.topnav
+{
+    padding-top:$ten;
+}
+
+.navbar-default {
+ border-color: transparent;
+box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+.header-blue .navbar-default {
+    @include bg-blue();
+   
+}
+
+.header-green .navbar-default {
+
+  @include bg-green();
+ 
+}
+
+.header-red .navbar-default {
+
+  @include bg-red();
+ 
+}
+
+.header-yellow .navbar-default {
+
+  @include bg-yellow();
+ 
+}
+ .navbar-default .navbar-nav > li > a > span {
+     border: $white solid 1px;
+     @include border-radius(100%);
+     padding:$five;
+     font-size: $ten;
+ }
+
+
+    .navbar-default .navbar-nav > li > a {
+        color: $white;
+        font-weight: 500;
+    }
+
+        .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:active, .navbar-default .navbar-nav > li > a:focus {
+            color: $gray-light;
+        }
+
+.logo {
+    width: $ten * 12;
+    margin: $zero ;
+}
+
+@media (min-width: 1200px) {
+    .logo {
+        width: $ten * 10;        
+    }
+}
+
+.navbar-toggle  {
+    position: relative;
+    float: right;
+    padding: $ten;
+    margin-top: $ten;
+    margin-right: $fifteen;
+    margin-bottom: $ten - 2;
+    background-color: $white;
+    border: $zero + 1 solid transparent;
+   @include border-radius($ten - 6);
+}
+
+.nav .dropdown-menu:before {
+    content: "";
+    display: block;
+    width: $zero;
+    height: $zero;
+    border-left: $ten solid transparent;
+    border-right: $ten solid transparent;
+    border-bottom: $ten solid #383838;
+    position: absolute;
+    right: $ten;
+    top: $ten - 20;
+}
+
+
+.dropdown-menu {
+    transition: all 0.5s ease;
+    opacity: $zero;
+}
+
+.open > .dropdown-menu {
+     @include border-radius($ten - 6);
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    margin: $zero;
+    opacity: $zero + 1;
+    transition: all 0.5s ease;
+    border: none;
+    text-transform: none;
+    min-width: $ten + 102px;
+    background: $black !important;
+}
+
+.nav .dropdown-menu a {
+    border-bottom: 1px solid $black;
+    padding: $five + 3 $twenty;
+    color: $white !important;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+}
+
+    .nav .dropdown-menu a:hover {
+        background-color: $black;
+        transition: all 1s ease;
+        color: $white;
+    }
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+    background-color: $blue-solid;
+    color: #fff;
+}
+@media (min-width: 768px) {  
+
+    .navbar-nav > li:after {
+        content: '';
+        position: absolute;
+        bottom: $zero;
+        left: $zero;
+        height: $zero;
+        width: $zero;
+        background-color: $white;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all .2s ease-in-out;
+        opacity:0.5;
+    }
+
+    .navbar-nav > li:hover:after {
+        visibility: visible;
+        transform: scaleX(1);
+        width: 100%;
+        height: .30rem;
+    }
+}
+/*footer*/
+
+footer {
+    background: $gray-light;
+    padding: $ten * 10 $twenty;
+    margin:$ten * 10 $zero $zero ;
+}
+@media (min-width: 768px) { 
+    .up {
+         top:$zero - 10 !important;
+    }
+}
+.up {
+    position: absolute;
+    right: $five;
+    top:$zero - 50;
+    border:none;
+    background: transparent;
+}
+.up i {
+    font-size: $ten * 4;
+    color: $gray-dark;
+}
+
+.up:hover i {
+    margin-top: $five - 10;
+    transition: all 0.5s ease;
+    color: $black;
+}
+.up:focus, .up:active, i:visited {
+    border:$zero;
+    outline: 0;
+}
+/*Select Color*/
+
+.box-choose-color {
+    width:100%;
+    height:100%;
+    position:fixed;
+    background:$gray-light;
+    background-size: 100%;
+    background-repeat: repeat;
+    z-index:9999999;
+    top:$zero;
+    left:$zero;
+    
+}
+.box-choose-color ul {
+    padding: $zero;
+    margin: $zero;
+}
+.box-choose-color {
+    li {
+list-style: none;
+padding-top:$ten * 4;
+padding-bottom:$ten * 4;
+    }
+li {
+
+ div{ 
+        
+        width:100px ;
+         height:100px ;
+         text-align: center;
+         padding:$ten * 4 0 !important;
+         @include border-radius(100%);
+         margin: $margin-center;
+         box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    }
+    div:hover {
+        opacity: 0.8;
+        transition: all 0.5s ease;
+        margin-top:$ten - 15;
+        cursor: pointer;
+    }
+}
+
+li a {
+    color:$white;
+}
+li:nth-child(1) div {
+    @include bg-blue();
+}
+li:nth-child(2) div {
+    @include bg-green();
+}
+li:nth-child(3) div {
+    @include bg-red();
+}
+li:nth-child(4) div {
+    @include bg-yellow();
+}
+}

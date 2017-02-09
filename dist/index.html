@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="app">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Escolha uma cor e saiba um pouco mais sobre ela">
+    <meta name="author" content="Felipe Citran">
+    <title>Escolhendo uma cor</title>
+    <!-- FavIcon -->
+    <link rel="icon" href="img/favicon.ico">
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- animate CSS -->
+    <link type="text/css" rel="stylesheet" href="css/animate.css">
+    <!-- Custom Fonts -->
+    <script src="https://use.fontawesome.com/0377bc0e46.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- Loader -->
+    <div id="loader">
+        <div class="progress">
+        </div>
+    </div>
+     <!-- Escolha uma cor -->
+    <section  class="box-choose-color">
+        <div class="container">
+            <h3 class="text-center">Escolha uma cor</h3>
+                <ul>
+                    <li class="col-xs-6 col-sm-6 col-md-3">
+                        <div><a href="" class="blue">Azul</a></div>
+                    </li>
+                    <li  class="col-xs-6 col-sm-6 col-md-3">
+                        <div><a href="" class="green">Verde</a></div>
+                    </li>
+                    <li  class="col-xs-6 col-sm-6 col-md-3">
+                        <div><a href="" class="red">Vermelho</a></div>
+                    </li>
+                    <li  class="col-xs-6 col-sm-6 col-md-3">
+                        <div><a href="" class="yellow">Amarelo</a></div>
+                    </li>
+                </ul>
+        </div>
+    </section>
+    <header class="header-blue" id="header">
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top topnav bg-blue" role="navigation">
+            <div class="container topnav">              
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand topnav" href="javascript:void(0)">
+                        <figure>
+                            <img src="img/logo.png" class="logo" alt="Logo" />
+                        </figure>
+                    </a>
+                </div>             
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#/home" class="new-color"><span class="glyphicon glyphicon-th-large"></span> Escolha uma cor</a></li>
+                        <li><a href="" id="my-color"><span class="glyphicon glyphicon-tint"></span> Sobre a cor </a></li>
+                        <li><a href="#/"><span class="glyphicon glyphicon-book"></span> Sobre o Desenvolvedor</a></li>
+                        <li><a href="#/contact"><span class="glyphicon glyphicon-comment"></span> Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+         <!-- Conteudo -->
+        <div ng-view></div>
+    </main>
+    <footer class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    Copyright © Felipe Citran - Escolhendo cores
+                    <button data-wow-delay="2s" data-wow-duration="1s" class="wow fadeInUp up" title="Vai para o topo">
+                        <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Angular + APP -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controllers/controller.js"></script>
+    <script src="app/routes/route.js"></script>
+    <!-- WOW JavaScript -->
+    <script src="js/wow.min.js"></script>
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <!-- Functions -->
+    <script src="js/functions.js"></script>
+</body>
+</html>

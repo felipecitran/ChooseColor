@@ -1,0 +1,27 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin bg-blue() {
+ background:$blue-solid;
+    background: $blue-gradient-web-kit;
+    background:$blue-gradient;
+}
+
+@mixin bg-green() {
+background:$green-solid;
+    background: $green-gradient-web-kit;
+    background:$green-gradient;
+}
+@mixin bg-red() {
+background:$red-solid;
+    background: $red-gradient-web-kit;
+    background:$red-gradient;
+}
+@mixin bg-yellow() {
+background:$yellow-solid;
+    background: $yellow-gradient-web-kit;
+    background:$yellow-gradient;
+}

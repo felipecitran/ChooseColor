@@ -1,0 +1,38 @@
+/*Colors*/
+
+$white: #fff;
+$black: #000;
+
+/*Blue*/
+$blue-solid: #2b6db5;
+$blue-gradient-web-kit:-webkit-linear-gradient(to left, #61d1ff, #2b6db5);
+$blue-gradient:linear-gradient(to left, #61d1ff, #2b6db5);
+
+/*Green*/
+$green-solid: #348F50;
+$green-gradient-web-kit:-webkit-linear-gradient(to left, #348F50, #56B4D3);
+$green-gradient:linear-gradient(to left, #348F50, #1bca81);
+
+/*Gray*/
+$gray-light:#eeeeee;
+$gray-dark:#ababab;
+
+/*Red*/
+$red-solid: #dc5950; 
+$red-gradient-web-kit: -webkit-linear-gradient(to left, #ad1b2b, #dc5950); 
+$red-gradient: linear-gradient(to left, #ad1b2b, #dc5950);
+
+/*Yellow*/
+$yellow-solid: #ffb400; 
+$yellow-gradient-web-kit: -webkit-linear-gradient(to left, #efc768, #ffb400); 
+$yellow-gradient: linear-gradient(to left, #efc768, #ffb400); 
+
+/*Numbers*/
+$zero:0px;
+$five:5px;
+$ten:10px;
+$fifteen:15px;
+$twenty:20px;
+
+/*Margin*/
+$margin-center: 0px auto;
